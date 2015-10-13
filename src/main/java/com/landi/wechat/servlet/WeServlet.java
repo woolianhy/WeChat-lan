@@ -9,6 +9,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.apache.log4j.Logger;
+
 import com.landi.wechat.utils.SignUtil;
 
 /**
@@ -17,6 +19,8 @@ import com.landi.wechat.utils.SignUtil;
 @WebServlet("/WeServlet")
 public class WeServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+
+	private Logger logger = Logger.getLogger(WeServlet.class);
 
 	/**
 	 * @see HttpServlet#HttpServlet()
@@ -33,7 +37,7 @@ public class WeServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		System.out.println("start...");
+		logger.info("start...");
 
 		// 微信加密签名
 		String signature = request.getParameter("signature");
