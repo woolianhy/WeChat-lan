@@ -28,7 +28,6 @@ public class WeServlet extends HttpServlet {
 	 */
 	public WeServlet() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
 	/**
